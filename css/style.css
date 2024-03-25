@@ -137,6 +137,7 @@ a {
 .info__wrapper {
   display: flex;
   gap: 20px;
+  justify-content: space-between;
 }
 
 .info__aside {
@@ -195,12 +196,12 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative;
   padding: 0 54px 48px 56px;
   margin-top: auto;
 }
 
-.info__slide-info {
+
+.info__slide-content {
   display: flex;
   flex-direction: column;
   max-width: 346px;
@@ -239,14 +240,12 @@ a {
   width: 40px;
   height: 40px;
   border: 1px solid #E93D07;
-  transition: background-color, fill, .2s ease-in-out;
+  transition: background-color, .1s ease-in-out;
 }
 
 .arrow {
-  transition: fill, .2s ease-in-out;
+  transition: fill, .1s ease-in-out;
 }
-
-
 
 .swiper-button-next:after, 
 .swiper-button-prev:after{
@@ -261,11 +260,16 @@ a {
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
+  background-color: #F38562;
+}
+
+.swiper-button-prev:active,
+.swiper-button-next:active {
   background-color: #fff;
 }
 
-.arrow-button-info-right:hover .arrow,
-.arrow-button-info-left:hover .arrow {
+.arrow-button-info-right:active .arrow,
+.arrow-button-info-left:active .arrow {
   fill: #E93D07;
 }
 
@@ -304,3 +308,74 @@ a {
 .description__item:hover .description-span{
   color: #E93D07;
 }
+
+.print {
+  margin-top: 100px;
+  /* background-image: url('../img/map.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 1165px; */
+}
+
+.print__title {
+  font-size: 30px;
+  margin-bottom: 30px;
+  max-width: 548px;
+}
+.buttons {
+  display: flex;
+  gap: 19px;
+}
+
+.button-fill {
+  font-family: 'Montserrat-SemiBold';
+  cursor: pointer;
+  font-size: 9px;
+  background: #E93D07;
+  color: #fff;
+  border-radius: 25px;
+  border: 1px solid #E93D07;
+  padding: 10px 38px 10px 37px;
+  transition: background-color, .1s ease-in-out;
+}
+
+.button-void {
+  font-family: 'Montserrat-SemiBold';
+  cursor: pointer;
+  font-size: 9px;
+  background: #fff;
+  color: #E93D07;
+  border-radius: 25px;
+  border: 1px solid #E93D07;
+  padding: 10px 38px 10px 37px;
+  transition: background-color, .1s ease-in-out;
+}
+
+.print__wrapper {
+  position: relative;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.print__dots {
+  background: #E93D07;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+.print__dots span {
+  width: 1px;
+  height: 10px;
+  background: #fff;
+}
+
+
+
+
