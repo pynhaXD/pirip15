@@ -33,6 +33,10 @@ body {
   color: #101D23;
 }
 
+h3 {
+  font-size: 30px;
+}
+
 ul {
   list-style-type: none;
 }
@@ -106,7 +110,7 @@ a {
 }
 
 .nav__list-link {
-  transition: color .2s ease-in-out;
+  transition: color, .2s ease-in-out;
 }
 
 .nav__list-link:hover{
@@ -192,7 +196,6 @@ a {
 }
 
 .info__slide {
-  background-image: url('../img/slider-img.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -208,6 +211,8 @@ a {
   gap: 28px;
   margin-top: 222px;
 }
+
+
 
 .info__slide-title {
   font-size: 36px;
@@ -244,7 +249,7 @@ a {
 }
 
 .arrow {
-  transition: fill, .1s ease-in-out;
+  transition: fill, .2s ease-in-out;
 }
 
 .swiper-button-next:after, 
@@ -295,11 +300,11 @@ a {
 }
 .description-span {
   color: #101D23;
-  transition: color .2s ease-in-out;
+  transition: color, .2s ease-in-out;
 }
 
 .descr-svg {
-  transition: fill .2s ease-in-out;
+  transition: fill, .2s ease-in-out;
 }
 
 .description__item:hover .descr-svg {
@@ -310,12 +315,7 @@ a {
 }
 
 .print {
-  margin-top: 100px;
-  /* background-image: url('../img/map.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  height: 1165px; */
+  margin: 100px 0 120px;
 }
 
 .print__title {
@@ -323,9 +323,16 @@ a {
   margin-bottom: 30px;
   max-width: 548px;
 }
+
+.print__buttons {
+  margin-bottom: 69px;
+}
+
 .buttons {
   display: flex;
   gap: 19px;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .button-fill {
@@ -352,30 +359,173 @@ a {
   transition: background-color, .1s ease-in-out;
 }
 
+.button-fill:hover {
+  background: #F38562;
+  color: #fff;
+}
+
+.button-fill:active {
+  background: #fff;
+  color: #E93D07;
+}
+
+.button-void:hover {
+  border: 1px solid #F38562;
+  color: #F38562;
+}
+
+.button-void:active {
+  background-color: #E93D07;
+  border: 1px solid #E93D07;
+  color: #fff;
+}
+
 .print__wrapper {
   position: relative;
 }
 
-#map {
-  position: absolute;
+.print-info{
+  
   top: 0;
-  right: 0;
-  z-index: 1;
+  left: 0;
 }
 
-.print__dots {
-  background: #E93D07;
-  padding: 10px;
-  border-radius: 50%;
+#map {
+  position: relative;
+  margin-left: auto;
+}
+
+.map-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: 'Montserrat-SemiBold';
+  max-width: 322px;
+  font-size: 12px;
+  border: 1px solid #E5E5E5;
+  border-radius: 10px;
+  padding: 32px 35px 31px 39px;
+}
+.map-slider__title {
+  color: #E93D07;
+}
+.map-slider__text {
+  color: #8E8F9B;
+}
+
+.map-slider__link {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  border-radius: 25px;
+  gap: 11px;
+  background-color: #E93D07;
+  padding: 12px 30px 9px 30px;
+}
+
+.map-slider__link a {
+  color: #fff;
+}
+
+.map-slider__icon {
+
+}
+
+
+.about {
+  background-color: #F3F6F8;
+  padding: 70px;
+}
+
+.about__wrapper {
+  display: flex;
+  justify-content: space-between;
+  
+}
+.about__info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 304px;
+}
+
+.about-text {
+  font-family: 'Montserrat-Regular';
+  font-size: 14px;
+}
+.about__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 793px;
+}
+.about__cards-item {
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
-  z-index: 10;
+  padding: 21px 11px 17px 20px;
+  background-color: transparent;
+  border: 1px solid #E5E5E5;
+  gap: 48px;
+  transition: background-color, border, .2s ease-in-out;
 }
-.print__dots span {
-  width: 1px;
-  height: 10px;
-  background: #fff;
+
+.about__cards-item:hover p {
+  transition: color, .2s ease-in-out;
 }
 
+.about__cards-item:hover .svg-card {
+  transition: fill, .2s ease-in-out;
+}
 
+.about__cards-item:hover {
+  border: 1px solid #E93D07;
+  background-color: #E93D07;
+}
 
+.about__cards-item:hover p {
+  color: #fff;
+}
 
+.about__cards-item:hover .svg-card{
+  fill: #fff;
+}
+
+.card-text {
+  color: #101D23;
+  font-size: 14px;
+}
+
+.ppt {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.ppt__text {
+  background-color: #101D23;
+  padding: 34px 153px 34px 62px;
+}
+.ppt__text-item {
+  font-size: 30px;
+  max-width: 446px;
+  color: #fff;
+}
+.ppt__files {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 44px 93px 44px 81px;
+  background-color: #E93D07;
+}
+.ppt__files-item {
+  display: flex;
+  gap: 23px;
+  
+}
+
+.ppt__files-descr {
+  max-width: 138px;
+  color: #fff;
+  transition: color, .2s ease-in-out;
+}
+
+.ppt__files-item:hover .ppt__files-descr {
+  color: #101D23;
+}
